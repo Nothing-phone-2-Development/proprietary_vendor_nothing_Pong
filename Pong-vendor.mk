@@ -1661,7 +1661,6 @@ PRODUCT_PACKAGES += \
     ims_rtp_daemon \
     imsdaemon \
     init.kernel.post_boot-cape \
-    init.kernel.post_boot \
     init.qcom.class_core \
     init.qcom.post_boot \
     init.qcom.sensors \
