@@ -4,6 +4,7 @@
 
 soong_namespace {
     imports: [
+        "device/nothing/Pong",
         "hardware/qcom-caf/sm8450",
         "hardware/qcom-caf/wlan",
         "vendor/qcom/opensource/commonsys/display",
@@ -31671,6 +31672,15 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
+    name: "vendor.noth.hardware.charge-service.xml",
+    owner: "nothing",
+    src: "proprietary/vendor/etc/vintf/manifest/vendor.noth.hardware.charge-service.xml",
+    filename_from_src: true,
+    sub_dir: "vintf/manifest",
+    soc_specific: true,
+}
+
+prebuilt_etc_xml {
     name: "vendor.qti.diag.hal.service.xml",
     owner: "nothing",
     src: "proprietary/vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml",
@@ -32540,6 +32550,38 @@ cc_prebuilt_binary {
                 "vendor.display.color@1.7",
                 "vendor.display.postproc@1.0",
                 "libsdm-disp-vndapis",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "vendor.noth.hardware.charge-service",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/vendor.noth.hardware.charge-service",
+            ],
+            shared_libs: [
+                "libbase_shim",
+                "libbase",
+                "libbinder_ndk",
+                "libutils",
+                "liblog",
+                "libcutils",
+                "vendor.noth.hardware.charge-V1-ndk",
                 "libc++",
                 "libc",
                 "libm",
@@ -35001,6 +35043,41 @@ cc_prebuilt_binary {
                 "libbinder_ndk",
                 "vendor.qti.qccsyshal_aidl-V1-ndk",
                 "vendor.qti.qccsyshal_aidl-halimpl",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    system_ext_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "sltntc",
+    owner: "nothing",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/system_ext/bin/sltntc",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcutils",
+                "libcrypto",
+                "libbinder",
+                "libutils",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libbase",
+                "android.hardware.health@1.0",
+                "android.hardware.health@2.0",
                 "libc++",
                 "libc",
                 "libm",

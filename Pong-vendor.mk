@@ -13,6 +13,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/Pong/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/nothing/Pong/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/nothing/Pong/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
+    vendor/nothing/Pong/proprietary/system_ext/etc/init/sltntc.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/sltntc.rc \
     vendor/nothing/Pong/proprietary/system_ext/etc/init/tcmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/tcmd.rc \
     vendor/nothing/Pong/proprietary/system_ext/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.hardware.qccsyshal@1.2-service.rc \
     vendor/nothing/Pong/proprietary/system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/vendor.qti.qccsyshal_aidl-service.rc \
@@ -28,6 +29,8 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/Pong/proprietary/system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml \
     vendor/nothing/Pong/proprietary/system_ext/etc/seccomp_policy/tcmd.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/tcmd.policy \
     vendor/nothing/Pong/proprietary/system_ext/etc/seccomp_policy/wfdservice64.policy:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/seccomp_policy/wfdservice64.policy \
+    vendor/nothing/Pong/proprietary/system_ext/etc/sltntc/sltntc.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sltntc/sltntc.conf \
+    vendor/nothing/Pong/proprietary/system_ext/etc/sltntc/sltntc_SM8475.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sltntc/sltntc_SM8475.conf \
     vendor/nothing/Pong/proprietary/system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_telephony_system_packages_config.xml \
     vendor/nothing/Pong/proprietary/system_ext/etc/sysconfig/qti_whitelist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist_system_ext.xml \
     vendor/nothing/Pong/proprietary/system_ext/etc/wfdconfigsink.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/wfdconfigsink.xml \
@@ -39,6 +42,9 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/Pong/proprietary/vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd \
     vendor/nothing/Pong/proprietary/vendor/etc/acdbdata/waipio_qrd/QRD_acdb_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_qrd/QRD_acdb_cal.acdb \
     vendor/nothing/Pong/proprietary/vendor/etc/acdbdata/waipio_qrd/QRD_workspaceFileXml.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/waipio_qrd/QRD_workspaceFileXml.qwsp \
+    vendor/nothing/Pong/proprietary/vendor/etc/advance_thermal_mitigation/atmc.json:$(TARGET_COPY_OUT_VENDOR)/etc/advance_thermal_mitigation/atmc.json \
+    vendor/nothing/Pong/proprietary/vendor/etc/advance_thermal_mitigation/atmc_ind.json:$(TARGET_COPY_OUT_VENDOR)/etc/advance_thermal_mitigation/atmc_ind.json \
+    vendor/nothing/Pong/proprietary/vendor/etc/advance_thermal_mitigation/nt_boost_adjuster.xml:$(TARGET_COPY_OUT_VENDOR)/etc/advance_thermal_mitigation/nt_boost_adjuster.xml \
     vendor/nothing/Pong/proprietary/vendor/etc/apdr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/apdr.conf \
     vendor/nothing/Pong/proprietary/vendor/etc/batching.conf:$(TARGET_COPY_OUT_VENDOR)/etc/batching.conf \
     vendor/nothing/Pong/proprietary/vendor/etc/camera/AI_Seg_v0.2.29.1_nothing.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/AI_Seg_v0.2.29.1_nothing.bin \
@@ -145,6 +151,7 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/Pong/proprietary/vendor/etc/init/trusteduilistener.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/trusteduilistener.rc \
     vendor/nothing/Pong/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/nothing/Pong/proprietary/vendor/etc/init/vendor.dpmd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.dpmd.rc \
+    vendor/nothing/Pong/proprietary/vendor/etc/init/vendor.noth.hardware.charge-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.noth.hardware.charge-service.rc \
     vendor/nothing/Pong/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
     vendor/nothing/Pong/proprietary/vendor/etc/init/vendor.qti.camera.provider@2.7-service_64.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.camera.provider@2.7-service_64.rc \
     vendor/nothing/Pong/proprietary/vendor/etc/init/vendor.qti.cdsprpc-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.cdsprpc-service.rc \
@@ -362,6 +369,12 @@ PRODUCT_COPY_FILES += \
     vendor/nothing/Pong/proprietary/vendor/etc/ssg/tz_whitelist.json:$(TARGET_COPY_OUT_VENDOR)/etc/ssg/tz_whitelist.json \
     vendor/nothing/Pong/proprietary/vendor/etc/telephony_packages.xml:$(TARGET_COPY_OUT_VENDOR)/etc/telephony_packages.xml \
     vendor/nothing/Pong/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    vendor/nothing/Pong/proprietary/vendor/etc/thermal.high.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal.high.conf \
+    vendor/nothing/Pong/proprietary/vendor/etc/thermal.low.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal.low.conf \
+    vendor/nothing/Pong/proprietary/vendor/etc/thermal.mid.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal.mid.conf \
+    vendor/nothing/Pong/proprietary/vendor/etc/thermal.noth.camera.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal.noth.camera.conf \
+    vendor/nothing/Pong/proprietary/vendor/etc/thermal.super.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal.super.conf \
+    vendor/nothing/Pong/proprietary/vendor/etc/thermal.third.camera.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal.third.camera.conf \
     vendor/nothing/Pong/proprietary/vendor/etc/wfdconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/wfdconfig.xml \
     vendor/nothing/Pong/proprietary/vendor/etc/wifi/icm.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/icm.conf \
     vendor/nothing/Pong/proprietary/vendor/etc/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -1606,6 +1619,7 @@ PRODUCT_PACKAGES += \
     dataconnection-saidl.xml \
     manifest_android.hardware.drm@1.4-service.widevine.xml \
     qtiradio-saidl.xml \
+    vendor.noth.hardware.charge-service.xml \
     vendor.qti.diag.hal.service.xml \
     vendor.qti.gnss-service.xml \
     vendor.qti.hardware.limits-service.xml \
@@ -1640,6 +1654,7 @@ PRODUCT_PACKAGES += \
     qconfigservice \
     qcrilNrd \
     vendor.display.color@1.0-service \
+    vendor.noth.hardware.charge-service \
     vendor.qti.camera.provider@2.7-service_64 \
     vendor.qti.esepowermanager@1.1-service \
     vendor.qti.hardware.alarm@1.0-service \
@@ -1724,6 +1739,7 @@ PRODUCT_PACKAGES += \
     dpmd \
     qccsyshal@1.2-service \
     qccsyshal_aidl-service \
+    sltntc \
     tcmd \
     wfdservice64
 
