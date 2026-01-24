@@ -26,7 +26,8 @@
                     "level": 9,
                     "unit_configs": {
                         "cpu": 9,
-                        "brightness": 5
+                        "brightness": 5,
+                        "dexopt": 1
                     }
                 },
                 {
